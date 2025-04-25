@@ -1,0 +1,30 @@
+{
+  "name": "vite-plugin-img-preload",
+  "version": "1.0.0",
+  "main": "./src/vite-plugin-img-preload.js",
+  "module": "dist/vite-plugin-img-preload.es.js",
+  "type": "module",
+  "types": "./src/vite-plugin-img-preload.d.ts",
+  "keywords": ["vite", "plugin", "preload", "image", "performance"],
+  "description": "Vite plugin for image preloading",
+  "exports": {
+    "import": "./dist/vite-plugin-img-preload.es.js",
+    "default": "./dist/vite-plugin-img-preload.cjs.js"
+  },
+  "peerDependencies": {
+    "vite": "^4.0.0 || ^5.0.0"
+  },
+  "scripts": {
+    "build": "vite build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BugfreeYeti/vite-plugin-img-preload"
+  },
+  "bugs": {
+    "url": "https://github.com/BugfreeYeti/vite-plugin-img-preload/issues"
+  },
+  "author": "BugfreeYeti <https://github.com/BugfreeYeti>",
+  "license": "MTI",
+  "files": ["dist"]
+}
