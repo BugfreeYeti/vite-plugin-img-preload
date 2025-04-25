@@ -7,6 +7,7 @@
   "types": "./src/vite-plugin-img-preload.d.ts",
   "keywords": ["vite", "plugin", "preload", "image", "performance"],
   "description": "Vite plugin for image preloading",
+  "private": false,
   "exports": {
     "import": "./dist/vite-plugin-img-preload.es.js",
     "default": "./dist/vite-plugin-img-preload.cjs.js"
