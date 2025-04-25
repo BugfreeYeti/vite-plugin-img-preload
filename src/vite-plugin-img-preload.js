@@ -32,6 +32,7 @@ export default function vitePluginImgPreload(options = {}) {
     },
 
     transformIndexHtml(html, { path: htmlPath, bundle }) {
+      
       try {
         const dirPath = path.join(process.cwd(), dir);
         if (!fs.existsSync(dirPath)) {
@@ -42,8 +43,7 @@ export default function vitePluginImgPreload(options = {}) {
         // 1. 读取目录下的图片文件
         const files = fs.readdirSync(dirPath).filter((file) => {
           const isImage = /\.(png|jpg|jpeg|gif|webp|avif|svg)$/i.test(file);
-          if (!isImage) return false;
-          
+          if (!isImage) return false;         
           // 2. 按需过滤
           if (filter) {
             const filepath = path.join(dirPath, file);
@@ -51,6 +51,7 @@ export default function vitePluginImgPreload(options = {}) {
           }
           return true;
         });
+       
 
         if (files.length === 0) {
           console.warn(`[vite-plugin-img-preload] No images matched in: ${dir}`);
@@ -72,6 +73,7 @@ export default function vitePluginImgPreload(options = {}) {
           /(<head[^>]*>)/i,
           `$1\n    <!-- Preload images (vite-plugin-img-preload) -->\n    ${preloadTags}`
         );
+        
       } catch (error) {
         console.error('[vite-plugin-img-preload] Error:', error.message);
         return html;
