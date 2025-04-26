@@ -13,6 +13,16 @@ export default defineConfig({
       },
       formats: ["es", "cjs"],
     },
+    rollupOptions:{
+      // 将所有 Node.js 内置模块标记为外部依赖
+      external: [
+        'path',
+        'fs',
+        'node:path',
+        'node:fs',
+        /node:.*/
+      ]
+    }
   },
   resolve: {
     extensions: [".ts", ".js"], // 允许导入 TS 和 JS 文件

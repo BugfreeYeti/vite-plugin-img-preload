@@ -1,7 +1,5 @@
-// vite-plugin-img-preload.js
-import fs from 'node:fs';
 import path from 'node:path';
-
+import fs from 'node:fs';
 /**
  * @typedef {Object} Options
  * @property {string} [dir='public/images'] 图片目录路径
