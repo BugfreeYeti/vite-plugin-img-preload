@@ -1,6 +1,6 @@
 {
   "name": "vite-plugin-img-preload",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "type": "module", 
   "main": "dist/vite-plugin-img-preload.cjs.js", 
   "module": "dist/vite-plugin-img-preload.es.js",
